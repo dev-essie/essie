@@ -6,12 +6,15 @@
         "node": ">=22.13.0"
     },
     "scripts": {
-        "dev": "vinext dev",
-        "build": "vinext build",
-        "start": "vinext start",
-        "test": "npm run build && node --test tests/rendered-html.test.mjs",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "test": "npm run build:cloudflare && node --test tests/rendered-html.test.mjs",
         "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .kilo",
-        "db:generate": "drizzle-kit generate"
+        "db:generate": "drizzle-kit generate",
+        "dev:cloudflare": "vinext dev",
+        "build:cloudflare": "vinext build",
+        "start:cloudflare": "vinext start"
     },
     "dependencies": {
         "drizzle-orm": "0.45.2",

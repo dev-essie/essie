@@ -1,6 +1,10 @@
 # Essie portfolio
 
-Multi-page portfolio (Home, Projects, About, Contact) modelled on https://www.jeremy0x.dev/. Run `npm run dev` and open the Local URL printed by the server. `npm run build` produces the production build, `npx tsc --noEmit` type-checks, `npm run lint` lints.
+Multi-page portfolio (Home, Projects, About, Certifications, Contact) modelled on https://www.jeremy0x.dev/. Run `npm run dev` and open the Local URL printed by the server. `npm run build` produces the production build, `npx tsc --noEmit` type-checks, `npm run lint` lints.
+
+## Deploying
+
+The default scripts use real Next.js (`next dev`, `next build`, `next start`), which is what Vercel expects: import the repo on Vercel with the Next.js preset and no extra settings. Every route is prerendered as static HTML. The original Cloudflare Workers toolchain (vinext + wrangler) is still available as `npm run dev:cloudflare`, `npm run build:cloudflare`, and `npm run start:cloudflare`.
 
 ## Project content
 
