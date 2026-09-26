@@ -44,3 +44,8 @@ next-env.d.ts
 /reference.html
 /reference-readable.txt
 *.tsbuildinfo
+
+# dropped media
+*.mp4
+/certificates/
+/.kilo/
