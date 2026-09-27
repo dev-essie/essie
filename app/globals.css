@@ -68,7 +68,7 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
 .hero h1:hover{text-shadow:3px 0 rgba(156,175,136,.55),-3px 0 rgba(163,163,163,.5)}
 .hero h1 .brand-dot{width:.2em;height:.2em;margin-left:.06em;transform:translateY(-.01em)}
 .role{margin:8px .1em 0 0;text-align:right;font-size:clamp(13px,1.6vw,19px);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.hero-links,.page-links{display:flex;justify-content:space-between;gap:64px;margin-top:60px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hero-links,.page-links{display:flex;justify-content:space-between;gap:clamp(96px,12vw,220px);margin-top:60px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .hero-links a,.page-links a{display:inline-flex;align-items:center;gap:10px;transition:color .3s}
 .hero-links a span,.page-links a span{border-bottom:1px solid var(--muted);padding-bottom:4px}
 .hero-links a:hover,.page-links a:hover{color:var(--ink)}
@@ -189,7 +189,7 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
   .social-rail{left:16px;bottom:calc(24px + env(safe-area-inset-bottom));flex-direction:column;gap:22px;font-size:20px}.rail-line{height:44px}
   main{min-height:100dvh;padding:80px 16px calc(48px + env(safe-area-inset-bottom))}
   .hero-inner{width:fit-content;max-width:100%}.hello{font-size:14px;margin-bottom:0}.hero h1{font-size:clamp(90px,31vw,170px)}.role{font-size:12px}
-  .hero-links{margin-top:40px;font-size:11px;gap:24px}
+  .hero-links{margin-top:40px;font-size:11px;gap:clamp(64px,18vw,110px)}
   .project-swiper{padding:8px 0 44px}.project-swiper .swiper-slide{width:min(420px,84vw)}
   .project-swiper .swiper-button-prev,.project-swiper .swiper-button-next{display:none}
   .slide-card{border-radius:14px}.slide-overlay{padding:6px}.slide-panel{padding:12px 10px;gap:6px;border-radius:12px}.slide-panel h2{font-size:10px}.slide-panel p{font-size:13px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.slide-icons{font-size:18px;gap:12px}
