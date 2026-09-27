@@ -176,7 +176,7 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
   .cert-slide img{padding:8px 8px 110px}
   .social-rail{left:16px;bottom:calc(24px + env(safe-area-inset-bottom));flex-direction:column;gap:22px;font-size:20px}.rail-line{height:44px}
   main{min-height:100dvh;padding:80px 16px calc(48px + env(safe-area-inset-bottom))}
-  .hero-inner{width:100%}.hello{font-size:13px}.hero h1{font-size:clamp(76px,24vw,140px)}.role{font-size:11px}
+  .hero-inner{width:fit-content;max-width:100%}.hello{font-size:13px;margin-bottom:-.2em}.hero h1{font-size:clamp(76px,24vw,140px)}.role{font-size:11px}
   .hero-links{margin-top:36px;font-size:11px;gap:16px}
   .project-swiper{padding:8px 0 44px}.project-swiper .swiper-slide{width:min(420px,84vw)}
   .project-swiper .swiper-button-prev,.project-swiper .swiper-button-next{display:none}
