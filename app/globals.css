@@ -137,6 +137,7 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
 .slide-panel p{margin:0;font-size:13px;font-weight:500;line-height:1.5;color:var(--ink)}
 .slide-foot{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:4px;width:100%}
 .slide-icons{display:flex;align-items:center;gap:14px;font-size:20px}
+.tech-icon{display:none}
 .slide-icons span,.slide-icons a{display:grid;place-items:center}
 .slide-icons a{color:var(--ink);transition:color .2s,transform .2s}
 .slide-icons a:hover{color:var(--sage);transform:translateY(-2px)}
@@ -236,7 +237,8 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
   .hero-links{margin-top:40px;font-size:11px;gap:clamp(64px,18vw,110px)}
   .project-swiper{padding:8px 0 44px}.project-swiper .swiper-slide{width:min(420px,84vw)}
   .project-swiper .swiper-button-prev,.project-swiper .swiper-button-next{display:none}
-  .slide-card{border-radius:14px}.slide-overlay{padding:6px}.slide-panel{padding:12px 10px;gap:5px;border-radius:12px}.slide-panel h2{font-size:14px}.slide-panel p{font-size:12px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.slide-icons{font-size:18px;gap:12px}.chips li{padding:3px 7px;font-size:10px}
+  .slide-card{border-radius:14px}.slide-overlay{padding:6px}.slide-panel{padding:12px 12px 10px;gap:6px;border-radius:12px}.slide-cat{display:none}.slide-panel h2{font-size:14px}.slide-panel p{font-size:13px;font-weight:500;line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .slide-chips{display:none}.slide-icons{font-size:19px;gap:12px;flex-wrap:wrap;justify-content:center}.tech-icon{display:grid;place-items:center;color:var(--ink)}.icon-sep.tech-icon{display:block}.chips li{padding:3px 7px;font-size:10px}
   .hero{min-height:calc(100svh - 92px)}.scroll-cue{bottom:14px}.featured{margin:24px auto}.featured-head{margin-bottom:18px}.gallery-tabs button{font-size:11px;padding:8px 11px}
   .page h1{font-size:clamp(40px,12vw,56px)}.lede{font-size:15px;margin-top:14px}.about-body{margin-top:18px}.about-body p{font-size:14px}
   .skills{gap:8px}.skills li{padding:7px 10px;font-size:11px}.page .page-links{margin-top:40px}

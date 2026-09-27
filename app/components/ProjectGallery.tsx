@@ -6,7 +6,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {A11y, EffectCoverflow, Keyboard, Mousewheel, Navigation, Pagination} from 'swiper/modules';
 import {FiExternalLink, FiGithub} from 'react-icons/fi';
 import {categories, projects, type Category} from '../data/projects';
-import {TechChips} from './techIcons';
+import {TechChips, techIcons} from './techIcons';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
@@ -47,8 +47,10 @@ export default function ProjectGallery(){
                 <h2>{project.name}</h2>
                 <p>{project.impact}</p>
                 <div className="slide-foot">
-                  <TechChips tech={project.tech}/>
+                  <TechChips tech={project.tech} className="slide-chips"/>
                   <div className="slide-icons">
+                    {project.tech.map(key => { const {Icon, label} = techIcons[key]; return <span key={key} className="tech-icon" title={label} aria-label={label} role="img"><Icon/></span>; })}
+                    {project.live || project.repo ? <span className="icon-sep tech-icon" aria-hidden="true"/> : null}
                     {project.live ? <a href={project.live} target="_blank" rel="noreferrer" title="Live site" aria-label={`Visit ${project.name}`}><FiExternalLink/></a> : null}
                     {project.repo ? <a href={project.repo} target="_blank" rel="noreferrer" title="Source code" aria-label={`${project.name} source on GitHub`}><FiGithub/></a> : null}
                   </div>
