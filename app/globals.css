@@ -51,8 +51,8 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
 /* Hero */
 .hero{width:100%;display:flex;justify-content:center;align-items:center;flex:1}
 .hero-inner{width:fit-content;max-width:100%;margin:0 auto;animation:arrive .8s both;text-align:center}
-.hello{margin:0 0 -.35em .06em;position:relative;z-index:1;text-align:left;font-size:15px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.hero h1{margin:0;font-size:clamp(120px,20vw,260px);font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--ink);display:flex;justify-content:center;align-items:baseline;transition:text-shadow .3s}
+.hello{margin:0 0 0 .06em;position:relative;z-index:1;text-align:left;font-size:17px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.hero h1{margin:-.2em 0 0;font-size:clamp(120px,20vw,260px);font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--ink);display:flex;justify-content:center;align-items:baseline;transition:text-shadow .3s}
 .hero h1:hover{text-shadow:3px 0 rgba(156,175,136,.55),-3px 0 rgba(163,163,163,.5)}
 .hero h1 .brand-dot{width:.2em;height:.2em;margin-left:.06em;transform:translateY(-.01em)}
 .role{margin:6px .1em 0 0;text-align:right;font-size:clamp(12px,1.5vw,16px);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -176,7 +176,7 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
   .cert-slide img{padding:8px 8px 110px}
   .social-rail{left:16px;bottom:calc(24px + env(safe-area-inset-bottom));flex-direction:column;gap:22px;font-size:20px}.rail-line{height:44px}
   main{min-height:100dvh;padding:80px 16px calc(48px + env(safe-area-inset-bottom))}
-  .hero-inner{width:fit-content;max-width:100%}.hello{font-size:13px;margin-bottom:-.2em}.hero h1{font-size:clamp(76px,24vw,140px)}.role{font-size:11px}
+  .hero-inner{width:fit-content;max-width:100%}.hello{font-size:14px;margin-bottom:0}.hero h1{font-size:clamp(76px,24vw,140px)}.role{font-size:11px}
   .hero-links{margin-top:36px;font-size:11px;gap:16px}
   .project-swiper{padding:8px 0 44px}.project-swiper .swiper-slide{width:min(420px,84vw)}
   .project-swiper .swiper-button-prev,.project-swiper .swiper-button-next{display:none}
