@@ -48,6 +48,10 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--sage);outline-offse
 @keyframes burst{0%{opacity:0;translate:0 6px;scale:1 .4}20%{opacity:1}100%{opacity:0;translate:0 22px;scale:1 1}}
 .burst i{translate:0 6px}
 
+/* Toast for the copied email address */
+.toast{position:fixed;left:50%;bottom:calc(36px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:70;padding:11px 18px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:12px;font-weight:600;letter-spacing:.06em;box-shadow:0 10px 30px rgba(0,0,0,.25);white-space:nowrap;animation:toast 2.2s ease both}
+@keyframes toast{0%{opacity:0;transform:translate(-50%,10px)}12%{opacity:1;transform:translate(-50%,0)}80%{opacity:1}100%{opacity:0}}
+
 /* Social rail (left, like the reference) */
 .social-rail{position:fixed;left:40px;bottom:40px;z-index:30;display:flex;flex-direction:column;align-items:center;gap:24px;font-size:20px;color:var(--muted)}
 .rail-line{width:1px;height:56px;background:var(--line);margin-bottom:6px}

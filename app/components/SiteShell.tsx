@@ -5,12 +5,13 @@ import {useCallback, useEffect, useState} from 'react';
 import {FiGithub, FiLinkedin, FiMail, FiMoon, FiSun} from 'react-icons/fi';
 import Brand from './Brand';
 import {useClickBurst} from './ClickBurst';
+import EmailLink, {EMAIL} from './EmailLink';
 import Intro from './Intro';
 
 const socials = [
   {href: 'https://github.com/dev-essie', label: 'GitHub', Icon: FiGithub},
   {href: 'https://linkedin.com/in/alabi-esther-essie', label: 'LinkedIn', Icon: FiLinkedin},
-  {href: 'mailto:admin@devessie.xyz', label: 'Email', Icon: FiMail},
+  {href: `mailto:${EMAIL}`, label: 'Email', Icon: FiMail},
 ];
 
 const navLinks = [['/projects','Projects'],['/about','About'],['/certifications','Certifications'],['/contact','Contact']];
@@ -34,7 +35,9 @@ export default function SiteShell({children}: {children: React.ReactNode}) {
     if (path !== '/') router.push('/');
   }
   const links = navLinks.map(([href,label]) => <Link key={href} href={href} aria-current={path===href?'page':undefined} onClick={() => setMenu(false)}>{label}</Link>);
-  const socialLinks = socials.map(({href,label,Icon}) => <a key={href} href={href} target={href.startsWith('mailto:') ? undefined : '_blank'} rel="noreferrer" aria-label={label}><Icon/></a>);
+  const socialLinks = socials.map(({href,label,Icon}) => href.startsWith('mailto:')
+    ? <EmailLink key={href} aria-label={`${label} (copies the address)`} title={EMAIL}><Icon/></EmailLink>
+    : <a key={href} href={href} target="_blank" rel="noreferrer" aria-label={label}><Icon/></a>);
   return <>
     <a href="#main" className="skip">Skip to content</a>
     {intro ? <Intro onDone={endIntro}/> : null}
