@@ -1,7 +1,7 @@
 import Brand from './components/Brand';
 import FeaturedProjects from './components/FeaturedProjects';
 import Link from 'next/link';
-import {FiArrowRight, FiFileText} from 'react-icons/fi';
+import {FiArrowRight, FiChevronDown, FiFileText} from 'react-icons/fi';
 export default function Home(){
   return <>
     <section className="hero" aria-labelledby="hero-title">
@@ -14,6 +14,7 @@ export default function Home(){
           <a href="/Essie-Resume.pdf" target="_blank" rel="noreferrer"><FiFileText aria-hidden="true"/><span>Resume</span></a>
         </div>
       </div>
+      <a className="scroll-cue" href="#featured" aria-label="Scroll to selected work"><span>Selected work</span><FiChevronDown aria-hidden="true"/></a>
     </section>
     <FeaturedProjects/>
   </>;

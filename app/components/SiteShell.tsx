@@ -25,6 +25,13 @@ export default function SiteShell({children}: {children: React.ReactNode}) {
   const {fire, layer} = useClickBurst();
   useEffect(() => { document.documentElement.classList.toggle('dark', dark); }, [dark]);
   useEffect(() => { setMenu(false); }, [path]);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 120);
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive: true});
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   useEffect(() => { document.body.classList.toggle('menu-open', menu); return () => document.body.classList.remove('menu-open'); }, [menu]);
   function toggleTheme() { setDark(value => !value); }
   const endIntro = useCallback(() => setIntro(false), []);
@@ -57,7 +64,7 @@ export default function SiteShell({children}: {children: React.ReactNode}) {
       <div className="nav-menu-links">{links}</div>
       <div className="nav-menu-socials">{socialLinks}</div>
     </div>
-    <aside className="social-rail" aria-label="Social links">
+    <aside className={`social-rail${scrolled ? ' rail-scrolled' : ''}`} aria-label="Social links">
       <span className="rail-line" aria-hidden="true"/>
       {socialLinks}
     </aside>

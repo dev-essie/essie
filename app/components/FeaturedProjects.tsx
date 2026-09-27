@@ -5,7 +5,7 @@ import {featured} from '../data/projects';
 import {TechChips} from './techIcons';
 
 export default function FeaturedProjects() {
-  return <section className="featured" aria-labelledby="featured-title">
+  return <section className="featured" id="featured" aria-labelledby="featured-title">
     <div className="featured-head">
       <h2 id="featured-title">Selected work</h2>
       <Link href="/projects"><span>All projects</span><FiArrowRight aria-hidden="true"/></Link>
@@ -28,5 +28,6 @@ export default function FeaturedProjects() {
         </article>;
       })}
     </div>
+    <div className="featured-cta"><Link href="/projects" className="button">View all projects<FiArrowRight aria-hidden="true"/></Link></div>
   </section>;
 }
