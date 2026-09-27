@@ -6,11 +6,11 @@ export const metadata:Metadata={title:'Certifications',description:'Essie’s de
 
 const fcc = 'https://freecodecamp.org/certification/Esther004/';
 const certifications: Certificate[] = [
-  {title:'BSc Biochemistry, First Class Honours',issuer:'University of Medical Sciences, Ondo',date:'October 2024',image:'/certificates/bsc-biochemistry.jpg',width:1000,height:1510,file:'/certificates/bsc-biochemistry.pdf'},
   {title:'Front End Development Libraries',issuer:'freeCodeCamp',date:'April 2025',image:'/certificates/fcc-front-end-libraries.jpg',width:800,height:1590,verify:fcc+'front-end-development-libraries'},
   {title:'JavaScript Algorithms and Data Structures',issuer:'freeCodeCamp',date:'March 2025',image:'/certificates/fcc-javascript-algorithms.jpg',width:800,height:1585,verify:fcc+'javascript-algorithms-and-data-structures-v8'},
   {title:'Responsive Web Design',issuer:'freeCodeCamp',date:'February 2025',image:'/certificates/fcc-responsive-web-design.jpg',width:800,height:1600,verify:fcc+'responsive-web-design'},
   {title:'Complete WordPress Website Developer Course',issuer:'Udemy',date:'September 2024',image:'/certificates/udemy-wordpress.jpg',width:800,height:595},
+  {title:'BSc Biochemistry, First Class Honours',issuer:'University of Medical Sciences, Ondo',date:'October 2024',image:'/certificates/bsc-biochemistry.jpg',width:1000,height:1510,file:'/certificates/bsc-biochemistry.pdf'},
 ];
 
 export default function Certifications(){
