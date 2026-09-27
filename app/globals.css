@@ -22,8 +22,8 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--sage);outline-offse
 .brand-dot{display:inline-block;width:.24em;height:.24em;border-radius:50%;background:var(--sage);margin-left:.08em;vertical-align:baseline;transform:translateY(-.02em)}
 
 /* Navigation */
-.nav{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);background:var(--nav-bg);text-transform:uppercase}
-.nav-logo{font-size:28px}
+.nav{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:22px 28px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);background:var(--nav-bg);text-transform:uppercase}
+.nav-logo{font-size:32px}
 .nav-links{display:flex;align-items:center;gap:38px;font-size:13px;font-weight:600;letter-spacing:.12em}
 .nav-links a{color:var(--muted);position:relative;padding:6px 0;transition:color .3s}
 .nav-links a:hover,.nav-links a[aria-current=page]{color:var(--ink)}
@@ -177,7 +177,8 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
 @media(max-width:1024px){.project-swiper .swiper-slide{width:min(520px,86vw)}}
 @media(max-width:900px){.contact-cards{grid-template-columns:1fr;gap:40px;max-width:420px}}
 @media(max-width:768px){
-  .nav{padding:12px 16px;padding-top:calc(12px + env(safe-area-inset-top))}.nav-logo{font-size:27px}.nav-links{display:none}.nav-mobile{display:flex;gap:6px}.theme{width:42px;height:42px;font-size:22px}.nav-toggle{z-index:36;position:relative}
+  .nav{padding:16px 18px;padding-top:calc(16px + env(safe-area-inset-top))}.nav-logo{font-size:34px}.nav-links{display:none}.nav-mobile{display:flex;gap:8px}.theme{width:46px;height:46px;font-size:25px}.nav-toggle{z-index:36;position:relative}.burger{width:26px;height:18px}.burger i:nth-child(2){top:8px}.burger i:nth-child(3){top:16px}.nav-toggle[aria-expanded=true] .burger i:nth-child(1){transform:translateY(8px) rotate(45deg)}.nav-toggle[aria-expanded=true] .burger i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  main{padding-top:92px}
   .nav-menu{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:40px;position:fixed;inset:0;z-index:35;background:var(--bg);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
   .nav-menu.open{opacity:1;visibility:visible;transform:none}
   .nav-menu-links{display:flex;flex-direction:column;align-items:center;gap:26px;font-size:22px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
