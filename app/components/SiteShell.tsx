@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import {usePathname, useRouter} from 'next/navigation';
 import {useCallback, useEffect, useState} from 'react';
-import {FiGithub, FiLinkedin, FiMail, FiMenu, FiMoon, FiSun, FiX} from 'react-icons/fi';
+import {FiGithub, FiLinkedin, FiMail, FiMoon, FiSun} from 'react-icons/fi';
 import Brand from './Brand';
 import {useClickBurst} from './ClickBurst';
 import Intro from './Intro';
@@ -47,7 +47,7 @@ export default function SiteShell({children}: {children: React.ReactNode}) {
       </div>
       <div className="nav-mobile">
         <button className="theme" onClick={toggleTheme} aria-label={`Switch to ${dark?'light':'dark'} theme`}>{dark ? <FiSun/> : <FiMoon/>}</button>
-        <button className="theme nav-toggle" onClick={() => setMenu(value => !value)} aria-expanded={menu} aria-controls="mobile-menu" aria-label={menu ? 'Close menu' : 'Open menu'}>{menu ? <FiX/> : <FiMenu/>}</button>
+        <button className="theme nav-toggle" onClick={() => setMenu(value => !value)} aria-expanded={menu} aria-controls="mobile-menu" aria-label={menu ? 'Close menu' : 'Open menu'}><span className="burger" aria-hidden="true"><i/><i/><i/></span></button>
       </div>
     </nav>
     <div id="mobile-menu" className={`nav-menu${menu ? ' open' : ''}`} aria-hidden={!menu} onClickCapture={event => { if ((event.target as HTMLElement).closest('a')) fire(event); }}>
