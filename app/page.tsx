@@ -11,7 +11,7 @@ export default function Home(){
         <p className="role">A software developer</p>
         <div className="hero-links">
           <Link href="/certifications"><FiArrowRight aria-hidden="true"/><span>Certifications</span></Link>
-          <a href="/Essie-Resume.pdf" target="_blank" rel="noreferrer"><FiFileText aria-hidden="true"/><span>Resume</span></a>
+          <a href="/Essie-Resume.pdf?v=privacy-20261001" target="_blank" rel="noreferrer"><FiFileText aria-hidden="true"/><span>Resume</span></a>
         </div>
       </div>
       <a className="scroll-cue" href="#featured" aria-label="Scroll to selected work"><span>Selected work</span><FiChevronDown aria-hidden="true"/></a>

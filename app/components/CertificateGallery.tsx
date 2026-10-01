@@ -10,7 +10,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export type Certificate = {title: string; issuer: string; date: string; image: string; width: number; height: number; file?: string; verify?: string};
+export type Certificate = {title: string; issuer: string; date: string; image: string; width: number; height: number; file?: string};
 
 export default function CertificateGallery({certificates}: {certificates: Certificate[]}) {
   const [current, setCurrent] = useState<number | null>(null);
@@ -59,7 +59,6 @@ export default function CertificateGallery({certificates}: {certificates: Certif
         <div className="cert-dialog-bar">
           <div><span className="cert-dialog-issuer">{active.issuer}</span><h2>{active.title}</h2></div>
           <div className="cert-dialog-actions">
-            {active.verify ? <a href={active.verify} target="_blank" rel="noreferrer">Verify <FiExternalLink aria-hidden="true"/></a> : null}
             {active.file ? <a href={active.file} target="_blank" rel="noreferrer">PDF <FiExternalLink aria-hidden="true"/></a> : null}
             <button type="button" className="cert-nav" onClick={() => step(-1)} aria-label="Previous certificate"><FiChevronLeft/></button>
             <button type="button" className="cert-nav" onClick={() => step(1)} aria-label="Next certificate"><FiChevronRight/></button>
@@ -69,7 +68,7 @@ export default function CertificateGallery({certificates}: {certificates: Certif
         <div className="cert-stage">
           <Image unoptimized src={active.image} alt={`${active.title} certificate`} width={active.width} height={active.height}/>
         </div>
-        <p className="cert-dialog-foot">{active.date} · {current! + 1} of {certificates.length}</p>
+        <p className="cert-dialog-foot">{active.date} · {current! + 1} of {certificates.length} | Public copy: sensitive details redacted</p>
       </div> : null}
     </dialog>
   </>;
