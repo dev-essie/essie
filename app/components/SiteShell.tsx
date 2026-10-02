@@ -35,6 +35,8 @@ export default function SiteShell({children}: {children: React.ReactNode}) {
   useEffect(() => { document.body.classList.toggle('menu-open', menu); return () => document.body.classList.remove('menu-open'); }, [menu]);
   function toggleTheme() { setDark(value => !value); }
   const endIntro = useCallback(() => setIntro(false), []);
+  // The intro animates the hero wordmark itself, so it only plays once the home page is the one on screen.
+  const showIntro = intro && path === '/';
   function replayIntro(event: React.MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
     setMenu(false);
@@ -47,7 +49,7 @@ export default function SiteShell({children}: {children: React.ReactNode}) {
     : <a key={href} href={href} target="_blank" rel="noreferrer" aria-label={label}><Icon/></a>);
   return <>
     <a href="#main" className="skip">Skip to content</a>
-    {intro ? <Intro onDone={endIntro}/> : null}
+    {showIntro ? <Intro onDone={endIntro}/> : null}
     {layer}
     <nav className="nav" aria-label="Main navigation" onClickCapture={event => { if ((event.target as HTMLElement).closest('a,button')) fire(event); }}>
       <Link className="nav-logo" href="/" aria-label="Essie home" onClick={replayIntro}><Brand/></Link>
@@ -68,6 +70,6 @@ export default function SiteShell({children}: {children: React.ReactNode}) {
       <span className="rail-line" aria-hidden="true"/>
       {socialLinks}
     </aside>
-    <main id="main">{children}</main>
+    <main id="main" className={showIntro ? 'intro-on' : undefined}>{children}</main>
   </>;
 }

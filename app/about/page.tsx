@@ -14,6 +14,6 @@ export default function About(){
     </div>
     <h2>Things I work with</h2>
     <ul className="skills">{skills.map(([label,Icon])=><li key={label}><Icon aria-hidden="true"/><span>{label}</span></li>)}</ul>
-    <div className="page-links"><Link href="/projects"><FiArrowRight aria-hidden="true"/><span>View projects</span></Link><Link href="/contact"><span>Get in touch</span><FiArrowRight aria-hidden="true"/></Link></div>
+    <div className="page-links"><Link href="/projects"><span>View projects</span><FiArrowRight aria-hidden="true"/></Link><Link href="/contact"><span>Get in touch</span><FiArrowRight aria-hidden="true"/></Link></div>
   </section>;
 }

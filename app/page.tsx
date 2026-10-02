@@ -7,7 +7,7 @@ export default function Home(){
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-inner">
         <p className="hello">Hey, I’m</p>
-        <h1 id="hero-title"><Brand/></h1>
+        <h1 id="hero-title"><span className="hero-mark"><Brand/></span></h1>
         <p className="role">A software developer</p>
         <div className="hero-links">
           <Link href="/certifications"><FiArrowRight aria-hidden="true"/><span>Certifications</span></Link>
