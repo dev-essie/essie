@@ -1,6 +1,6 @@
 # Essie portfolio
 
-Multi-page portfolio (Home, Projects, About, Certifications, Contact) modelled on https://www.jeremy0x.dev/. Run `npm run dev` and open the Local URL printed by the server. `npm run build` produces the production build, `npx tsc --noEmit` type-checks, `npm run lint` lints.
+Multi-page portfolio (Home, Projects, Research, About, Certifications, Contact) modelled on https://www.jeremy0x.dev/. Run `npm run dev` and open the Local URL printed by the server. `npm run build` produces the production build, `npx tsc --noEmit` type-checks, `npm run lint` lints.
 
 ## Deploying
 
@@ -14,4 +14,4 @@ Previews are static screenshots in `public/projects/<slug>.jpg` (900x900 JPEG), 
 
 ## Layout
 
-The Projects page is a Swiper coverflow carousel (one square card per project, description and tech icons in a translucent panel, links to the live site and source). Swipe, drag, arrow keys, and horizontal mouse wheel all move it. The intro (a sage scanner line lighting up the essie logo) plays only on the home page and replays when the header logo is clicked. Theme toggles between light and dark; the brand dot and intro use the sage token `--sage` in `app/globals.css`. Hero links go to Certifications and the resume PDF (`public/Essie-Resume.pdf`). Certifications live in `app/certifications/page.tsx` with files under `public/certificates/`. Contact cards: LinkedIn, GitHub, and email (admin@devessie.xyz). The email also appears in the social rail on every page.
+The Projects page is a Swiper coverflow carousel (one square card per project, description and tech icons in a translucent panel, links to the live site and source). Swipe, drag, arrow keys, and horizontal mouse wheel all move it. The home page splits “Selected work” into software/client highlights and research/bioinformatics highlights (`app/components/FeaturedProjects.tsx`). The **Research** page is `app/research/page.tsx`. The intro (a sage scanner line lighting up the essie logo) plays only on the home page and replays when the header logo is clicked. Theme toggles between light and dark; the brand dot and intro use the sage token `--sage` in `app/globals.css`. Hero links go to Research, Certifications, and the resume PDF (`public/Essie-Resume.pdf`). Certifications live in `app/certifications/page.tsx` with files under `public/certificates/`. Contact cards: LinkedIn, GitHub, and email (admin@devessie.xyz). The email also appears in the social rail on every page.

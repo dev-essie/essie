@@ -78,7 +78,7 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
 .hero h1:hover{text-shadow:3px 0 rgba(156,175,136,.55),-3px 0 rgba(163,163,163,.5)}
 .hero h1 .brand-dot{width:.2em;height:.2em;margin-left:.06em;transform:translateY(-.01em)}
 .role{margin:8px .1em 0 0;text-align:right;font-size:clamp(13px,1.6vw,19px);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.hero-links,.page-links{display:flex;justify-content:space-between;gap:clamp(96px,12vw,220px);margin-top:60px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hero-links,.page-links{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(40px,10vw,120px);margin-top:60px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .hero-links a,.page-links a{display:inline-flex;align-items:center;gap:10px;transition:color .3s}
 .hero-links a span,.page-links a span{border-bottom:1px solid var(--muted);padding-bottom:4px}
 .hero-links a:hover,.page-links a:hover{color:var(--ink)}
@@ -95,6 +95,11 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
 .featured-head h2{margin:0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .featured-head a{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .3s}
 .featured-head a span{border-bottom:1px solid var(--muted);padding-bottom:3px}.featured-head a:hover{color:var(--ink)}
+.featured-intro{max-width:720px;margin:0 auto 28px;font-size:14px;line-height:1.6;color:var(--muted);text-align:center}
+.featured-intro a{border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .2s,border-color .2s}
+.featured-intro a:hover{color:var(--ink);border-color:var(--sage)}
+.featured-block{margin-top:8px}
+.featured-subtitle{margin:0 0 16px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);text-align:center}
 .featured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
 .feature-card{display:flex;flex-direction:column;gap:8px;text-align:left}
 .feature-media{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--card);transition:transform .3s,box-shadow .3s}
@@ -151,11 +156,30 @@ main{min-height:100dvh;display:flex;flex-direction:column;align-items:center;jus
 .about-page .lede,.about-body{max-width:760px}
 .about-body{margin:16px auto 0}
 .about-body p{margin:0 0 16px;font-size:clamp(15px,1.6vw,17px);line-height:1.7;color:var(--muted)}
+.about-body a{border-bottom:1px solid var(--line);transition:color .2s,border-color .2s}
+.about-body a:hover{color:var(--ink);border-color:var(--sage)}
 .page h2{margin:36px 0 16px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .skills{list-style:none;padding:0;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:760px}
 .skills li{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:500}
 .skills svg{font-size:16px}
 .page .page-links{justify-content:center;gap:40px;margin-top:56px}
+.research-page{text-align:left;max-width:720px}
+.research-page h1{text-align:center}
+.research-page .lede{text-align:center;max-width:640px}
+.research-section{margin-top:40px}
+.research-section h2{margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+.research-text{margin:0 0 14px;font-size:clamp(15px,1.55vw,17px);line-height:1.72;color:var(--muted)}
+.research-text:last-child{margin-bottom:0}
+.research-text a{border-bottom:1px solid var(--line);transition:color .2s,border-color .2s}
+.research-text a:hover{color:var(--ink);border-color:var(--sage)}
+.research-list{margin:0;padding:0 0 0 1.15em;list-style:disc;color:var(--muted);font-size:clamp(15px,1.55vw,17px);line-height:1.72}
+.research-list li{margin:0 0 10px}
+.research-list li:last-child{margin-bottom:0}
+.research-actions{display:flex;flex-wrap:wrap;gap:18px;margin-top:12px}
+.research-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:3px;transition:color .2s,border-color .2s}
+.research-link:hover{color:var(--ink);border-color:var(--sage)}
+.research-page-links{margin-top:48px}
+.featured-work-section .featured-block + .featured-block{margin-top:40px}
 .contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin:72px auto 0;max-width:1100px}
 .contact-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;padding:36px 24px;border:1px solid var(--line);border-radius:28px;background:var(--bg);color:var(--ink);transition:transform .4s;z-index:0}
 .contact-card:before,.contact-card:after{content:'';position:absolute;inset:0;border:1px solid var(--line);border-radius:28px;background:var(--bg);z-index:-1;transition:transform .4s}
@@ -235,7 +259,7 @@ main.intro-on .hero-mark:after{content:'';position:absolute;top:-.08em;bottom:0;
   .social-rail.rail-scrolled{opacity:0;transform:translateY(12px);pointer-events:none}
   main{min-height:100dvh;padding:80px 16px calc(48px + env(safe-area-inset-bottom))}
   .hero-inner{width:fit-content;max-width:100%}.hello{font-size:14px;margin-bottom:0}.hero h1{font-size:clamp(70px,23vw,130px)}.role{font-size:12px}
-  .hero-links{margin-top:40px;font-size:11px;gap:clamp(64px,18vw,110px)}
+  .hero-links{margin-top:40px;font-size:11px;gap:clamp(28px,12vw,64px)}
   .swiper.project-swiper{padding:8px 0 44px}.project-swiper .swiper-slide,.certs-links{width:min(420px,84vw)}
   .project-swiper .swiper-button-prev,.project-swiper .swiper-button-next{display:none}
   .slide-card{border-radius:14px}.slide-overlay{padding:6px}.slide-panel{padding:12px 12px 10px;gap:6px;border-radius:12px}.slide-cat{display:none}.slide-panel h2{font-size:14px}.slide-panel p{font-size:13px;font-weight:500;line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}

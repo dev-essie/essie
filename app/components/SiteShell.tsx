@@ -14,7 +14,7 @@ const socials = [
   {href: `mailto:${EMAIL}`, label: 'Email', Icon: FiMail},
 ];
 
-const navLinks = [['/projects','Projects'],['/about','About'],['/certifications','Certifications'],['/contact','Contact']];
+const navLinks = [['/projects','Projects'],['/research','Research'],['/about','About'],['/certifications','Certifications'],['/contact','Contact']];
 
 export default function SiteShell({children}: {children: React.ReactNode}) {
   const [dark, setDark] = useState(false);
@@ -24,7 +24,8 @@ export default function SiteShell({children}: {children: React.ReactNode}) {
   const router = useRouter();
   const {fire, layer} = useClickBurst();
   useEffect(() => { document.documentElement.classList.toggle('dark', dark); }, [dark]);
-  useEffect(() => { setMenu(false); }, [path]);
+  // Close the mobile drawer when the route changes (incl. browser back/forward); link clicks also clear it.
+  useEffect(() => { setMenu(false); }, [path]); // eslint-disable-line react-hooks/set-state-in-effect -- sync UI to URL
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 120);
