@@ -1,6 +1,6 @@
 import type {IconType} from 'react-icons';
 import {FiCpu} from 'react-icons/fi';
-import {SiAnthropic, SiCss, SiGooglesheets, SiHtml5, SiJavascript, SiNextdotjs, SiPlotly, SiPostgresql, SiPython, SiReact, SiResend, SiScikitlearn, SiStreamlit, SiSupabase, SiTailwindcss, SiTelegram, SiTypescript, SiVite, SiWordpress} from 'react-icons/si';
+import {SiAnthropic, SiCss, SiGo, SiGooglesheets, SiHtml5, SiJavascript, SiNextdotjs, SiPlotly, SiPostgresql, SiPython, SiReact, SiRemix, SiResend, SiScikitlearn, SiStreamlit, SiSupabase, SiTailwindcss, SiTelegram, SiTypescript, SiVite, SiWordpress} from 'react-icons/si';
 import type {Tech} from '../data/projects';
 
 export const techIcons: Record<Tech, {Icon: IconType; label: string}> = {
@@ -10,6 +10,7 @@ export const techIcons: Record<Tech, {Icon: IconType; label: string}> = {
   html:{Icon:SiHtml5,label:'HTML'}, css:{Icon:SiCss,label:'CSS'}, telegram:{Icon:SiTelegram,label:'Telegram API'},
   sklearn:{Icon:SiScikitlearn,label:'scikit-learn'}, resend:{Icon:SiResend,label:'Resend'}, anthropic:{Icon:SiAnthropic,label:'Claude API'}, openai:{Icon:FiCpu,label:'OpenAI API'},
   supabase:{Icon:SiSupabase,label:'Supabase'}, postgres:{Icon:SiPostgresql,label:'Postgres'}, googlesheets:{Icon:SiGooglesheets,label:'Google Sheets'}, plotly:{Icon:SiPlotly,label:'Plotly'},
+  go:{Icon:SiGo,label:'Go'}, remix:{Icon:SiRemix,label:'Remix'},
 };
 
 export function TechChips({tech, className = ''}: {tech: Tech[]; className?: string}) {

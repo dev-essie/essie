@@ -16,6 +16,6 @@ export default function Certifications(){
   return <section className="projects-page certs-page">
     <h1 className="sr-only">Certifications</h1>
     <CertificateGallery certificates={certifications}/>
-    <div className="page-links certs-links"><a href="/Essie-Resume.pdf?v=privacy-20261001" target="_blank" rel="noreferrer"><FiFileText aria-hidden="true"/><span>Resume</span></a><Link href="/projects"><span>View projects</span><FiArrowRight aria-hidden="true"/></Link></div>
+    <div className="page-links certs-links"><a href="/Essie-Resume.pdf?v=privacy-20261001" target="_blank" rel="noreferrer"><FiFileText aria-hidden="true"/><span>Resume</span></a><Link href="/research"><span>Research</span><FiArrowRight aria-hidden="true"/></Link><Link href="/projects"><span>View projects</span><FiArrowRight aria-hidden="true"/></Link></div>
   </section>;
 }
