@@ -255,8 +255,10 @@ main.intro-on .hero-mark:after{content:'';position:absolute;top:-.08em;bottom:0;
   body.menu-open{overflow:hidden}
   .cert-dialog{width:100vw;max-width:100vw;max-height:100dvh;border-radius:0;border:0}.cert-dialog-inner{max-height:100dvh}.cert-dialog-bar{flex-wrap:wrap;padding:12px 14px}.cert-dialog-bar h2{font-size:13px}.cert-dialog-actions a{display:none}.cert-stage{padding:10px}.cert-stage img{max-height:calc(100dvh - 140px)}
   .cert-slide img{padding:8px 8px 110px}
-  .social-rail{left:16px;bottom:calc(24px + env(safe-area-inset-bottom));flex-direction:column;gap:22px;font-size:20px;transition:opacity .3s,transform .3s}.rail-line{height:44px}
-  .social-rail.rail-scrolled{opacity:0;transform:translateY(12px);pointer-events:none}
+  /* Fixed left rail shares the same inset as main padding on narrow screens, so the
+     vertical icon stack sits on top of left-aligned body copy (e.g. Research thesis).
+     Social links stay in the full-screen nav menu on small viewports. */
+  .social-rail{display:none}
   main{min-height:100dvh;padding:80px 16px calc(48px + env(safe-area-inset-bottom))}
   .hero-inner{width:fit-content;max-width:100%}.hello{font-size:14px;margin-bottom:0}.hero h1{font-size:clamp(70px,23vw,130px)}.role{font-size:12px}
   .hero-links{margin-top:40px;font-size:11px;gap:clamp(28px,12vw,64px)}
