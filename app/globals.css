@@ -260,10 +260,10 @@ main.intro-on .hero-mark:after{content:'';position:absolute;top:-.08em;bottom:0;
      Social links stay in the full-screen nav menu on small viewports. */
   .social-rail{display:none}
   main{min-height:100dvh}
-  .hero{min-height:auto;padding:4px 0 36px;align-items:flex-start}
+  .hero{min-height:auto;padding:4px 0 24px;flex-direction:column;align-items:center;justify-content:flex-start}
   .hero-inner{width:100%;max-width:100%;text-align:center}
-  .hello{font-size:14px;margin:0 auto;text-align:center}
-  .hero h1{font-size:clamp(70px,23vw,130px);justify-content:center}
+  .hello{font-size:14px;margin:0 auto 10px;text-align:center}
+  .hero h1{margin:0;font-size:clamp(70px,23vw,130px);justify-content:center;line-height:1.02}
   .role{margin:12px auto 0;text-align:center;font-size:clamp(12px,3.2vw,14px);line-height:1.45;max-width:20em}
   .hero-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;margin:28px auto 0;width:100%;max-width:360px;font-size:12px}
   .hero-links a{justify-content:center;min-height:44px;padding:6px 8px}
@@ -272,7 +272,8 @@ main.intro-on .hero-mark:after{content:'';position:absolute;top:-.08em;bottom:0;
   .project-swiper .swiper-button-prev,.project-swiper .swiper-button-next{display:none}
   .slide-card{border-radius:14px}.slide-overlay{padding:6px}.slide-panel{padding:12px 12px 10px;gap:6px;border-radius:12px}.slide-cat{display:none}.slide-panel h2{font-size:14px}.slide-panel p{font-size:13px;font-weight:500;line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
   .slide-chips{display:none}.slide-icons{font-size:19px;gap:12px;flex-wrap:wrap;justify-content:center}.slide-icons .tech-icon{display:grid;color:var(--ink)}.slide-icons .icon-sep.tech-icon{display:block}.chips li{padding:3px 7px;font-size:10px}
-  .scroll-cue{position:static;transform:none;margin:20px auto 0}.featured{margin:24px auto;width:100%}.featured-head{margin-bottom:18px}.gallery-tabs button{font-size:11px;padding:8px 11px;min-height:44px}
+  .scroll-cue{display:none}
+  .featured{margin:16px auto 24px;width:100%}.featured-head{margin-bottom:18px}.gallery-tabs button{font-size:11px;padding:8px 11px;min-height:44px}
   .page{width:100%;max-width:100%;padding-top:4px}
   .page h1{font-size:clamp(40px,12vw,56px);margin-top:0}
   .research-page{max-width:100%}
